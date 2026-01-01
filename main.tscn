@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://gdcb6qtn3hrf"]
+[gd_scene load_steps=3 format=3 uid="uid://gdcb6qtn3hrf"]
 
-[ext_resource type="Script" uid="uid://c6gqb62bufi6o" path="res://cards.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://c6gqb62bufi6o" path="res://card_handler.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://2ne0yxfwufo3" path="res://card.gd" id="2_0xm2m"]
 
 [node name="main" type="Node"]
 
-[node name="cards" type="Node" parent="."]
+[node name="card_handler" type="Node" parent="."]
 script = ExtResource("1_ig7tw")
+
+[node name="card" type="Node" parent="card_handler"]
+script = ExtResource("2_0xm2m")
+
+[node name="deck" type="Node" parent="card_handler"]
 
 [node name="to do" type="Node" parent="."]
